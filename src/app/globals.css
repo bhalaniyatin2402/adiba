@@ -1,0 +1,421 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb      : 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb  : 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb      : 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb  : 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.video_call {
+  background-image   : url(/images/video_call.png);
+  background-repeat  : no-repeat;
+  background-size    : cover;
+  background-position: top;
+  width              : 100%;
+  height             : 650px;
+  min-height         : 80vh;
+  position           : relative;
+}
+
+.video_call_user {
+  background-image   : url(/images/video_call-user.png);
+  background-repeat  : no-repeat;
+  background-size    : top;
+  background-position: center;
+  width              : 20vw;
+  height             : 200px;
+  min-width          : 150px;
+  min-height         : 20vh;
+  position           : absolute;
+  top                : 20px;
+  left               : 20px;
+}
+
+.count-section::before {
+  content            : "";
+  background-image   : url(/images/count-left.svg);
+  width              : 345px;
+  height             : 360px;
+  position           : absolute;
+  left               : -10%;
+  top                : -50%;
+  display            : inline-block;
+  background-position: bottom;
+  background-size    : cover;
+  rotate             : -10deg;
+}
+
+.count-section::after {
+  content            : "";
+  background-image   : url(/images/count-right.svg);
+  width              : 345px;
+  height             : 220px;
+  position           : absolute;
+  right              : -10%;
+  bottom             : -25%;
+  display            : inline-block;
+  background-position: bottom;
+  background-size    : cover;
+  rotate             : -10deg;
+}
+
+.secondary-hero {
+  background: linear-gradient(105deg,
+      rgba(20, 99, 191, 0.15) 0%,
+      rgba(20, 99, 191, 0) 100%),
+    linear-gradient(94deg,
+      #293754 0%,
+      rgba(41, 55, 84, 0.86) 77.08%,
+      rgba(41, 55, 84, 0.72) 100%);
+}
+
+.secondary-hero::before {
+  content            : "";
+  background-image   : url(/images/secondary-hero-line.svg);
+  background-repeat  : no-repeat;
+  width              : 643px;
+  position           : absolute;
+  left               : 48%;
+  height             : 184px;
+  top                : -88%;
+  /* bottom          : 0%; */
+  /* left            : auto; */
+  display            : inline-block;
+  background-position: bottom;
+  background-size    : 200px;
+  /* rotate          : 21deg; */
+  transform          : translateX(-50%);
+}
+
+.secondary-hero::after {
+  content            : "";
+  background-image   : url(/images/secondary-hero-line.svg);
+  background-repeat  : no-repeat;
+  width              : 643px;
+  position           : absolute;
+  left               : 48%;
+  height             : 184px;
+  bottom             : 32%;
+  /* bottom          : 0%; */
+  /* left            : auto; */
+  display            : inline-block;
+  background-position: bottom;
+  background-size    : 220px;
+  rotate             : -5deg;
+  transform          : translateX(-50%);
+}
+
+.first_line_arrow::after {
+  content            : "";
+  background-image   : url(/images/top-to-down-arrow.svg);
+  background-repeat  : no-repeat;
+  width              : 20px;
+  position           : absolute;
+  left               : 18px;
+  height             : 262px;
+  top                : 130%;
+  display            : inline-block;
+  background-position: bottom;
+  background-size    : 8px;
+}
+
+.second_line_arrow::after {
+  content            : "";
+  background-image   : url(/images/top-to-down-arrow.svg);
+  background-repeat  : no-repeat;
+  width              : 20px;
+  position           : absolute;
+  left               : 18px;
+  height             : 262px;
+  top                : 130%;
+  display            : inline-block;
+  background-position: bottom;
+  background-size    : 8px;
+}
+
+.arrow-right::after {
+  content            : "";
+  background-image   : url(/images/top-to-down-arrow-how-it-works.svg);
+  background-repeat  : no-repeat;
+  width              : 20px;
+  position           : absolute;
+  left               : 12px;
+  height             : 60px;
+  top                : 110%;
+  display            : inline-block;
+  background-position: bottom;
+  background-size    : 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  /* .arrow-right::before {
+    content  : "";
+    position : absolute;
+    border   : 3px dashed #000;
+    width    : 65%;
+    transform: translate(87%, 50%);
+    top      : 46px;
+    left     : 22%;
+  } */
+
+  .arrow-right::after {
+    content            : "";
+    background-image   : url(/images/left-to-right-arrow.svg);
+    background-repeat  : no-repeat;
+    width              : 240px;
+    position           : absolute;
+    left               : 80px;
+    height             : 22px;
+    bottom             : 35%;
+    top                : auto;
+    display            : inline-block;
+    background-position: bottom;
+    background-size    : 180px;
+  }
+
+  .count-section::before {
+    content            : "";
+    background-image   : url(/images/count-left.svg);
+    width              : 645px;
+    height             : 308px;
+    position           : absolute;
+    bottom             : 5%;
+    left               : -25%;
+    display            : inline-block;
+    background-position: bottom;
+    background-size    : 300px;
+    top                : auto;
+    rotate             : 0deg;
+  }
+
+  .count-section::after {
+    content            : "";
+    background-image   : url(/images/count-right.svg);
+    width              : 385px;
+    height             : 358px;
+    position           : absolute;
+    right              : -2%;
+    top                : -66%;
+    bottom             : 0%;
+    left               : auto;
+    display            : inline-block;
+    background-position: bottom;
+    background-size    : 320px;
+    rotate             : 0deg;
+    background-repeat  : no-repeat;
+  }
+
+  .secondary-hero::before {
+    content            : "";
+    background-image   : url(/images/secondary-hero-line.svg);
+    background-repeat  : no-repeat;
+    width              : 643px;
+    position           : absolute;
+    left               : 48%;
+    height             : 184px;
+    top                : -45%;
+    /* bottom          : 0%; */
+    /* left            : auto; */
+    display            : inline-block;
+    background-position: bottom;
+    background-size    : auto;
+    /* rotate          : 21deg; */
+    transform          : translateX(-50%);
+  }
+
+  .secondary-hero::after {
+    content            : "";
+    background-image   : url(/images/secondary-hero-line.svg);
+    background-repeat  : no-repeat;
+    width              : 643px;
+    position           : absolute;
+    left               : 48%;
+    height             : 184px;
+    bottom             : -32%;
+    /* bottom          : 0%; */
+    /* left            : auto; */
+    display            : inline-block;
+    background-position: bottom;
+    background-size    : auto;
+    rotate             : -5deg;
+    transform          : translateX(-50%);
+  }
+
+  .first_line_arrow::after {
+    content            : "";
+    background-image   : url(/images/left-to-right-line.svg);
+    background-repeat  : no-repeat;
+    width              : 640px;
+    position           : absolute;
+    left               : -30px;
+    height             : 290px;
+    top                : 95%;
+    display            : inline-block;
+    background-position: bottom;
+    background-size    : 450px;
+  }
+
+  .second_line_arrow::after {
+    content            : "";
+    background-image   : url(/images/right-to-left-line.svg);
+    background-repeat  : no-repeat;
+    width              : 630px;
+    position           : absolute;
+    right              : -26%;
+    left               : auto;
+    height             : 290px;
+    top                : 94%;
+    display            : inline-block;
+    background-position: bottom;
+    background-size    : 452px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .video_call {
+    background-image   : url(/images/video_call.png);
+    background-repeat  : no-repeat;
+    background-size    : cover;
+    background-position: center;
+    width              : 100%;
+    height             : 500px;
+    min-height         : 0;
+    position           : relative;
+  }
+
+  .video_call_user {
+    background-image   : url(/images/video_call-user.png);
+    background-repeat  : no-repeat;
+    background-size    : contain;
+    background-position: center;
+    width              : 100px;
+    height             : 70px;
+    min-height         : 0;
+    min-width          : 0;
+    position           : absolute;
+    top                : 10px;
+    left               : 10px;
+  }
+}
+
+
+/* DatePickerStyles.css */
+.datepicker-container {
+  display        : flex !important;
+  align-items    : center !important;
+  justify-content: center !important;
+  margin-top     : 50px !important;
+}
+
+.react-datepicker {
+  font-family  : 'Arial', sans-serif !important;
+  border       : 1px solid #ccc !important;
+  border-radius: 4px !important;
+  box-shadow   : 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  display      : inline-block !important;
+  position     : relative !important;
+}
+
+/* .react-datepicker__triangle {
+  display: none !important;
+} */
+
+.react-datepicker__header {
+  background-color: #293754 !important;
+  color           : #fff !important;
+}
+
+.react-datepicker__day-names {
+  display        : flex !important;
+  justify-content: space-around !important;
+
+}
+
+.react-datepicker__day-name {
+  color: white !important;
+
+}
+
+.react-datepicker__day {
+  width        : 2rem !important;
+  line-height  : 2rem !important;
+  margin       : 0.2rem !important;
+  border-radius: 4px !important;
+
+}
+
+.react-datepicker__day:hover {
+  background-color: #293754 !important;
+  color           : #fff !important;
+}
+
+.react-datepicker__day--selected {
+  background-color: #293754 !important;
+  color           : white !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: #293754 !important;
+  color           : #fff !important;
+}
+
+.react-datepicker__current-month {
+  font-weight: bold !important;
+  color      : white !important;
+}
+
+.react-datepicker__navigation--next,
+.react-datepicker__navigation--previous {
+  border: 0.45rem solid transparent !important;
+
+}
+
+.react-datepicker__navigation--next {
+  border-left-color: #fff !important;
+}
+
+.react-datepicker__navigation--previous {
+  border-right-color: #fff !important;
+}
+
+.react-datepicker__navigation {
+  display        : flex !important;
+  justify-content: center !important;
+  align-items    : center !important;
+  position       : absolute !important;
+  top            : 10px !important;
+  width          : 1.25rem !important;
+  height         : 1.25rem !important;
+  outline        : 0 !important;
+  cursor         : pointer !important;
+}
+
+.react-datepicker__triangle::after {
+  border-bottom-color: #293754 !important;
+  width              : 9px;
+}
+
+.PhoneInputInput:focus {
+  outline: none;
+}
+
+.PhoneInputCountry {
+  margin: 0px 10px !important;
+}
